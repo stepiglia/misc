@@ -1,14 +1,17 @@
 # Git Config 
-```
-git config --global user.name "Stefano P." 
-git config --global user.email "s*@gmail.com"
-```
 
 In VSC, after opening the folder type in terminal 
 
 ```
 git init 
 ```
+
+
+```
+git config --global user.name "Stefano P." 
+git config --global user.email "s*@gmail.com"
+```
+
 
 ## Git Environments 
 ### Staging Files
@@ -190,5 +193,52 @@ This way of working with branches
 ### Merge Conflicts 
 
 
+### Remotes 
+```
+Git remote add NAME URL 
+Git remote remove NAME 
+Git remote OLDNAME NEWNAME
+git remote -v 
+```
 
+### Git Push
 
+```
+Git push REMOTE BRANCH
+# git push --set-upstream-to-origin main 
+git push -u origin main #--set-upstreeam
+git push --all
+#git branch --set-upstream-to <origin/remote-branch
+```
+
+# Git Hub
+
+You can use the instructions on your newly created repository to 
+* push ( sends the recent commit history from your local repository up to GitHub)
+* pull (pull grabs any changes from the GitHub repository and merges them into your local repository) 
+
+Some examples 
+```
+git remote add origin https://github.com/stepiglia/blabla
+git push -all
+git push -u origin main 
+```
+
+### Git Pull 
+Go in the repository and copy the URL under Clone
+
+```
+git clone https://..
+```
+
+### Git Fetch 
+command that tells your local git to retrieve the latest meta-data info from the original (yet doesn't do any file transferring. It's more like just checking to see if there are any changes available). git pull on the other hand does that AND brings (copy) those changes from the remote repository.
+
+```
+git fetch https://..
+```
+
+You can always check the branches with 
+```
+git branch -a
+```
